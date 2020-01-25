@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Calendar</title>
+    <title>Calendar</title>
 
-<link rel="stylesheet" href="index.css"/>
-<script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
+
 <body onload="onLoad()">
- <h1>Calendar</h1>
-<div class="container">
-        <div class="calendar">
-         
-                <div id="month">
-    
-                </div>
-        
-                <div id="days-row">
+    <div id="month">
 
-                </div>
-                
-              
     </div>
+    <div class="container">
+        <button id="cursor-left">
+            << </button>
+        <div class="calendar">
 
-</div>
+
+
+            <div id="days-row">
+
+            </div>
+            <div id="gray-bar">
+                &nbsp;
+            </div>
+            <div id="week-row-1">
+
+            </div>
+            <div id="week-row-2">
+
+            </div>
+            <div id="week-row-3">
+
+            </div>
+            <div id="week-row-4">
+
+            </div>
+            <div id="week-row-5">
+
+            </div>
+
+
+        </div>
+        <button id="cursor-right">
+             >> </button>
+    </div>
+    <p>
+        For this exercise, I would first refactor the code to make it more DRY. I found that I had a lot of repetitive code, especially when populating the contents of the calendar. It is not possible to add dynamically add divs, and manipulate the contents of
+        those divs. Therefore, I had to add each div in the html file. I, also need to separate the code into functions to make it more readable. So that others can see the process.
+        <p>
+            I would rather use React or JQuery to render the contents of the calendar. I could have a week component that would render for each week of the month. It would be a lot easier to maintain, and add to.
+        </p>
+
+        <p>
+            I did not quite find the proper font that matches the design, or the gray color for the buttons, underline, and border around the calendar. And I am not sure if the spacing between elements is correct.
+        </p>
 
 </body>
+
 </html>

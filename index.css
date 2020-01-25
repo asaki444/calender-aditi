@@ -1,34 +1,86 @@
-.calendar{
+.calendar {
     width: 350px;
-    border: solid 1px black;
+    border: solid 1px #d3d3d3;
+    display: flex-container;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 35%;
+    display: flex;
     margin: 0 auto;
 }
 
-
-
-h1{
+h1 {
     text-align: center;
 }
 
-.edge-day{
-    color:red;
+.edge-day {
+    color: red;
 }
 
-#days-row, .week-row-1, .week-row-2, .week-row-3, .week-row-4,
-.week-row-5{
+#days-row,
+#week-row-1,
+#week-row-2,
+#week-row-3,
+#week-row-4,
+#week-row-5 {
     display: flex;
 }
 
-#days-row div, .edge-day, .day-contain{
+#gray-bar {
+    width: 90%;
+    margin: 0 auto;
+    border-top: solid 1px #d3d3d3;
+}
+
+#days-row div {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+#days-row {
+    margin: 15px 0px 10px 0;
+    font-weight: bold;
+}
+
+.day-contain {
     width: 50px;
     height: 50px;
     text-align: center;
     font-weight: bold;
 }
 
-#month{
+.day-contain {
+    font-size: 15px;
+}
+
+#month {
     text-align: center;
     font-size: 25px;
-    font-weight: 50px;
-    height: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#cursor-right {
+    margin-left: 10px;
+}
+
+#cursor-left {
+    margin-right: 10px;
+}
+
+#cursor-right,
+#cursor-left {
+    margin-top: 25%;
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+    font-weight: bold;
+    background-color: #d3d3d3;
+    color: white;
 }
