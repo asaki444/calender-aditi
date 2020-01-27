@@ -4,6 +4,7 @@ const days = ["S", "M", "T", "W", "T", "F", "S"]
 
 let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
+let currentYear = currentDate.getFullYear();
 
 function onLoad() { 
 
@@ -58,6 +59,7 @@ function loadCalendar(month, year) {
     let monthHTML = document.getElementById("month")
     monthHTML.innerHTML = months[month];
     monthHTML.innerHTML += " " + year;
+    let daysInMonth = new Date(year, month + 1, 0).getDate();
     let emptyDays = `<div class='day-contain'>&nbsp;&nbsp;</div>`
     document.getElementById(`week-row-1`).innerHTML += emptyDays.repeat(findFirstDay);
     let countWeeks = 1;
