@@ -1,15 +1,11 @@
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-
 const days = ["S", "M", "T", "W", "T", "F", "S"]
 
 let currentDate = new Date();
-let currentYear = currentDate.getFullYear();
 let currentMonth = currentDate.getMonth();
 
-
-
-function onLoad() {
+function onLoad() { 
 
     document.getElementById("cursor-left").addEventListener('click', () => {
         scroll('left')
@@ -56,17 +52,12 @@ function scroll(direction) {
 }
 
 
-
-
-
-
 function loadCalendar(month, year) {
 
     let findFirstDay = new Date(year, month, 1).getDay();
     let monthHTML = document.getElementById("month")
     monthHTML.innerHTML = months[month];
     monthHTML.innerHTML += " " + year;
-    let daysInMonth = new Date(year, month, 0).getDate();
     let emptyDays = `<div class='day-contain'>&nbsp;&nbsp;</div>`
     document.getElementById(`week-row-1`).innerHTML += emptyDays.repeat(findFirstDay);
     let countWeeks = 1;
@@ -86,8 +77,6 @@ function loadCalendar(month, year) {
             week.innerHTML +=
                 `<div class='day-contain'>${countDays}</div>`
         }
-
-
         countDays++;
     }
 }
